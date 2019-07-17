@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+  <html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Stencil Component Starter</title>
+    <script type="module" src="../dist/as-countdown/as-countdown.esm.js"></script>
+    <script nomodule src="../dist/as-countdown/as-countdown.js"></script>
+
+    <style>
+      .style--cool > as-countdown {
+        font-family: sans-serif;
+        display: inline-flex;
+      }
+
+      .style--cool > as-countdown > section:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      .style--cool as-countdown > section > div {
+        display: inline-block;
+        font-size: 24px
+      }
+
+      .style--cool as-countdown > section > div {
+        font-size: 24px
+      }
+
+      .style--cool as-countdown > section > label {
+        font-size: 10px;
+        font-weight: bold;
+        margin-left: 0.25rem;
+        align-self: center;
+      }
+
+      .style--round > as-countdown {
+        font-family: sans-serif;
+        display: inline-flex;
+      }
+
+      .style--round > as-countdown > section:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+
+      .style--round as-countdown > section > div {
+        font-size: 24px;
+      }
+
+      .style--round as-countdown > section > label {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: bold;
+      }
+
+      .style--round as-countdown > section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: orangered;
+        color: white;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <as-countdown
+      date="2019-07-18T06:54:03.518Z"
+      days-label="Tage"
+      hours-label="Stunden"
+      minutes-label="Minuten"
+      seconds-label="Sekunden">
+    </as-countdown>
+
+    <br>
+
+    <as-countdown
+      date="2019-08-08"
+      days-label="Dias"
+      hours-label="Horas"
+      minutes-label="Minutos"
+      seconds-label="Segundos">
+    </as-countdown>
+
+    <br>
+
+    <as-countdown
+      id="timestampTest">
+    </as-countdown>
+
+    <br>
+
+    <div class="style--cool">
+      <as-countdown
+        id="parseTest"
+        days-label="Dias"
+        hours-label="Horas"
+        minutes-label="Minutos"
+        seconds-label="Segundos">
+      </as-countdown>
+    </div>
+
+    <br>
+
+    <div class="style--round">
+      <as-countdown
+        date="1566346414104"
+        hide-seconds>
+      </as-countdown>
+    </div>
+
+    <div class="style--cool">
+      <as-countdown
+        date="2019-12-31"
+        hide-hours
+        hide-minutes
+        hide-seconds
+        days-label="Days left in 2019">
+      </as-countdown>
+    </div>
+
+    <script>
+      const timestampTest = document.getElementById('timestampTest');
+      timestampTest.date = Date.now() + 1000 * 60 * 60 * 24;
+
+      const parseTest = document.getElementById('parseTest');
+      parseTest.date = '2019-12-24';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+as-countdown,
+as-countdown > section,
+as-countdown > section > div,
+as-countdown > section > label {
+  display: inline-block;
+}
