@@ -1,6 +1,6 @@
 {
   "name": "as-countdown",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Web Component that counts down",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -28,5 +28,13 @@
     "jest-cli": "24.8.0",
     "puppeteer": "1.17.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanderand/as-countdown"
+  },
+  "bugs": {
+    "url": "https://github.com/Sanderand/as-countdown/issues"
+  },
+  "homepage": "https://github.com/Sanderand/as-countdown#readme"
 }
